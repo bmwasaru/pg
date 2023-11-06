@@ -1,6 +1,7 @@
 import psycopg2
 import psycopg2.extras
 
+
 class Database:
     def __init__(self, db_url):
         self.db_url = db_url
@@ -33,8 +34,10 @@ class Database:
         # converts an SQL row (returned by the psycopg2 library) to an instance of the RowObject class
         return RowObject(row)
 
+
 class RowObject:
     """RowObject class, which supports both dictionary-style and attribute-style access"""
+
     def __init__(self, row):
         self._row = row
 
